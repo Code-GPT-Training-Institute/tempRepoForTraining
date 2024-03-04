@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <script>
+        function init() {
+            document.querySelectorAll(".dynamicContent")[1].textContent += "Init 0 ";
+        }
+        function init1() {
+            document.querySelectorAll(".dynamicContent")[1].textContent += "Init 1 ";
+        }
+        function init2() {
+            document.querySelectorAll(".dynamicContent")[1].textContent += "Init 2 ";
+        }
+        function init3() {
+            document.getElementById("dynamicContentId").innerText += "Loading from on load event from body";
+            document.querySelectorAll(".dynamicContent")[1].textContent += "Init 3 ";
+        }
+        window.onload = init1;
+        window.addEventListener("load", init2);
+        document.addEventListener("DOMContentLoaded", init3);
+    </script>
+</head>
+<body onload="init()">
+<!-- <body> -->
+    <h1 class="dynamicContent">Hello World</h1>
+    <h1 id="dynamicContentId" class="dynamicContent"></h1>
+    <!-- <script>
+        // document.getElementById("dynamicContentId").innerText = "Hello World";
+        // console.log(document.getElementsByTagName("h1"));
+        // document.getElementsByTagName("h1")[1].innerText = "Hello World";
+        console.log(document.getElementsByClassName("dynamicContent"));
+        document.getElementsByClassName("dynamicContent")[1].innerText = "Test"
+    </script> -->
+</body>
+</html>

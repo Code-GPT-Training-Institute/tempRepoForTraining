@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1 class="dynamicContent">Hello World</h1>
+    <h1 id="dynamicContentId" class="dynamicContent"></h1>
+    <script>
+        // document.getElementById("dynamicContentId").innerText = "Hello World";
+        // console.log(document.getElementsByTagName("h1"));
+        // document.getElementsByTagName("h1")[1].innerText = "Hello World";
+        console.log(document.getElementsByClassName("dynamicContent"));
+        document.getElementsByClassName("dynamicContent")[1].innerText = "Test"
+    </script>
+</body>
+</html>

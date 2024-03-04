@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function Declaration
+        function test() {
+            return 1 + 1;
+        }
+
+        console.log(test in window);
+
+        // // Function Expression
+        // let adder = function() {
+        //     return 2 + 2;
+        // }
+
+        // let adder = function(a, b) {
+        //     return a + b;
+        // }
+
+        // let adder = (a, b) => a + b; // Array Function
+
+
+        let adder = (...input) => {
+            let result = 0;
+            for (let i = 0; i < input.length; i++) {
+                result = result + input[i];
+            }
+            return result;
+        }
+        console.log(adder(2, 6, 13, 21, 1, 3, 4, 5, 110));
+    </script>
+</body>
+</html>

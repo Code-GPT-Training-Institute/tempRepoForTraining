@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const intituteName = "CodeGPT";
+
+        // intituteName = "Override"; // gives error
+
+        const user = {
+            name: "Balaji",
+            age: 28
+        };
+        // user = [];
+        Object.freeze(user); // Restricting object not to be modified
+        user.name = "microsoft"
+        user.age = 100;
+        user.isAlive = false;
+
+        console.log(user.age); // 100
+        console.log(user.name); // microsoft
+        console.log(user.isAlive); // microsoft
+        // var i;
+        // var // Uses the concept called hoisting
+        // institureAddress = "Madurai";
+        
+        // console.log(institureAddress);
+        
+        // let institureAddress;
+
+        // function init() {
+        //     // var intituteName; // Hoisting concept
+        //     if (true) {
+        //         // var intituteName = "CodeGPT";
+        //         let intituteName = "CodeGPT"; // block scope
+        //     }
+        //     console.log(intituteName);
+        // }init();
+        // console.log(intituteName); // This will never work is it's not declared outside the function/in global scope
+
+        // let, var, const
+        for (let i = 0; i < 10; i++) {
+            // console.log(i);
+        }
+        // console.log("Outside the for loop " + i);
+    </script>
+</body>
+</html>
