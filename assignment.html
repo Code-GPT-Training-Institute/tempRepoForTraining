@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var cart = {
+        //     title : "Tomato",
+        //     getCostPrice : function(){
+        //         return 100
+        //     },
+        //     getSellingPrice : function(){
+        //         var calculateProfit = function(val){
+        //             return val * 0.2; // 20%
+        //         }
+        //         return this.getCostPrice() + calculateProfit(this.getCostPrice());
+        //     }
+        // };
+
+        // var cart = {
+        //     title : "Tomato",
+        //     getCostPrice : function(){
+        //         return 100
+        //     },
+        //     getSellingPrice : function(){
+        //         var calculateProfit = function(){
+        //             return cart.getCostPrice() * 0.2; // 20%
+        //         }
+        //         return this.getCostPrice() + calculateProfit();
+        //     }
+        // };
+
+        // var cart = {
+        //     title : "Tomato",
+        //     getCostPrice : function(){
+        //         return 100
+        //     },
+        //     getSellingPrice : function(){
+        //         const constPrice = this.getCostPrice();
+        //         var calculateProfit = function(){
+        //             return constPrice * 0.2; // 20%
+        //         }
+        //         return constPrice + calculateProfit();
+        //     }
+        // };
+        
+        // var cart = {
+        //     title : "Tomato",
+        //     getTaxPrice : function() {
+        //         return this.getCostPrice() * 0.08;
+        //     },
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getCostWithTax  : function() {
+        //         return this.getCostPrice() + this.getTaxPrice();
+        //     },
+        //     getSellingPrice : function(){
+        //         const them = this;
+        //         var calculateProfit = function(){
+        //             // return this.getCostWithTax() * 0.2;
+        //             console.log(them.getTaxPrice());
+        //             return them.getCostWithTax() * 0.2; // 20%
+        //         }
+        //         return this.getCostWithTax() + calculateProfit();
+        //     }
+        // };
+
+        // var cart = {
+        //     title : "Tomato",
+        //     getTaxPrice : function() {
+        //         return this.getCostPrice() * 0.08;
+        //     },
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getCostWithTax  : function() {
+        //         return this.getCostPrice() + this.getTaxPrice();
+        //     },
+        //     getSellingPrice : function(){
+        //         // const them = this;
+        //         var calculateProfit = function(){
+        //             return this.getCostWithTax() * 0.2; // 20%
+        //         }
+        //         return this.getCostWithTax() + calculateProfit.call(this);
+        //     }
+        // };
+
+        // var cart = {
+        //     title : "Tomato",
+        //     getTaxPrice : function() {
+        //         return this.getCostPrice() * 0.08;
+        //     },
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getCostWithTax  : function() {
+        //         return this.getCostPrice() + this.getTaxPrice();
+        //     },
+        //     getSellingPrice : function(){
+        //         // const them = this;
+        //         var calculateProfit = function(){
+        //             return this.getCostWithTax() * 0.2; // 20%
+        //         }
+        //         return this.getCostWithTax() + calculateProfit.apply(this);
+        //     }
+        // };
+
+        // var cart = {
+        //     title : "Tomato",
+        //     getTaxPrice : function() {
+        //         return this.getCostPrice() * 0.08;
+        //     },
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getCostWithTax  : function() {
+        //         return this.getCostPrice() + this.getTaxPrice();
+        //     },
+        //     getSellingPrice : function(){
+        //         // const them = this;
+        //         var calculateProfit = function(){
+        //             return this.getCostWithTax() * 0.2; // 20%
+        //         }
+        //         return this.getCostWithTax() + calculateProfit.bind(this)();
+        //     }
+        // };
+
+        var cart = {
+            title : "Tomato",
+            getTaxPrice : function() {
+                return this.getCostPrice() * 0.08;
+            },
+            getCostPrice : function(){
+                return 100;
+            },
+            getCostWithTax  : function() {
+                return this.getCostPrice() + this.getTaxPrice();
+            },
+            getSellingPrice : function() {
+                var calculateProfit = () => {
+                    return this.getCostWithTax() * 0.2;
+                }
+                return this.getCostWithTax() + calculateProfit();
+            }
+        };
+
+
+        // console.log(cart.title);
+        // console.log(cart.getCostPrice());
+        console.log(cart.getSellingPrice());
+
+
+
+        // var name;
+        // var name =  "Bhuvi";
+        // function test() {
+        //     var name = "Balaji";
+        //     name = "Kicha";
+        //     console.log(typeof this.name);
+        //     console.log(name);
+        //     console.log(this.name);
+        // } test();
+
+    </script>
+</body>
+</html>
