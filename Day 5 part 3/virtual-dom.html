@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: darkolivegreen;
+            color: antiquewhite;
+            margin: auto;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+    <script>
+
+        function clickHandler() {
+            console.log("you clicked the button");
+            init();
+        }
+
+        let buttonElement = document.createElement("button");
+        buttonElement.textContent = "Click Me";
+        buttonElement.addEventListener("click", clickHandler);
+
+        let h1Element = document.createElement("h1");
+        h1Element.textContent = "Welcome to your life";
+        h1Element.setAttribute("class", "box");
+
+        function init() {
+            console.log("Dom Loaded....");
+            document.getElementById("root").appendChild(h1Element);
+            document.getElementById("root").appendChild(buttonElement);
+        }
+
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

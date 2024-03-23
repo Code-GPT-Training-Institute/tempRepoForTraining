@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj1 = {};
+        // let obj2 = new Object();
+        // let obj3 = Object.create(null);
+
+        // console.log(typeof obj1);
+        // console.log(typeof obj2);
+        // console.log(typeof obj3);
+
+        // console.log(obj1);
+        // console.log(obj2);
+        // console.log(obj3);
+
+        // let ironman = {
+        //     title: "Ironman",
+        //     power: 5
+        // }
+
+        // console.log(ironman.title);
+        // ironman.title = "IronTable";
+        // console.log(ironman.title);
+
+        let person = Object.create(null);
+        Object.defineProperty(person, "canWalk", { value: true });
+        Object.defineProperty(person, "avenger", { value: {
+                                            releaseDate: "05/02/2025",
+                                            ticketPrice: 1000
+                                        }
+        });
+
+        // console.log(person);
+
+        let ironman = Object.create(null);
+        Object.defineProperty(ironman, "title", { value: "Ironman", writable: true});
+        Object.defineProperties(ironman, {
+            title : { value : "Ironman", writable : true, enumerable : true,  configurable : true },
+            power : { value : 5, enumerable : true }
+            }
+        )
+
+        ironman.title = "test";
+
+        console.log(ironman.title);
+
+        // console.log(ironman);
+
+        // console.log(Object.keys(ironman));
+
+        // for (let key of Object.keys(ironman)) {
+        //     console.log(ironman[key]);
+        // }
+
+        // var ironman = Object.create(null);
+        // Object.defineProperties(ironman, {
+        //     title : { value : "Ironman", writable : true, enumerable : true, configurable : true },
+        //     power : { value : 5, enumerable : true },
+        //     accessTitle : { 
+        //         get : function(){
+        //                 return this.title;
+        //         }, 
+        //         set : function(ntitle){
+        //                 this.title = ntitle;
+        //         }
+        //     }
+        // });
+
+        // ironman.accessTitle = "Test";
+        // console.log(ironman.accessTitle)
+
+    </script>
+</body>
+</html>

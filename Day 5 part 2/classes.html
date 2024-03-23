@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Person {
+            firstName;
+            lastName;
+            gender;
+
+            salary;
+
+            constructor(nSalary) {
+                this.salary = nSalary;
+            }
+        }
+        class Hero extends Person {
+            title = "default title";
+            power = 10;
+            moves = [];
+
+            firstName = "Default first name";
+
+            static nickName = "Kingkong";
+
+            static sayHello() {
+                console.log("Hello...");
+            }
+
+            constructor(nTitle, nPower, nMovie, nSalary) {
+                super(nSalary);
+                this.title = nTitle;
+                this.power = nPower;
+                this.moves.push(nMovie);
+            }
+        }
+
+        let sk = new Hero("Hero", 25, { budget: "100cr", director: "Shakar"}, "150cr");
+
+        console.log(sk.salary);
+
+        console.log(Hero.nickName);
+
+        Hero.sayHello();
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Hero {
+            title = "default";
+            power = 5;
+            releaseDate = {};
+
+            #firstName = "Default first name";
+
+            constructor(nTitle, nPower, nReleaseDate) {
+                this.title = nTitle;
+                this.power = nPower;
+                this.releaseDate = nReleaseDate;
+            }
+
+            get accessFirstName() {
+                return this.#firstName;
+            }
+
+            set accessFirstName(nFirstName) {
+                this.#firstName = nFirstName;
+            }
+        }
+
+        let ajith = new Hero("Good Bad Ugly", 10, new Date());
+
+        ajith.title; //Good Bad Ugly
+        console.log(ajith.title);
+        ajith.accessFirstName = "AK";
+        console.log(ajith.accessFirstName);
+
+        let punthRajuKumarSir = new Hero("Legend", 100, new Date());
+        console.log(punthRajuKumarSir.title);
+    </script>
+</body>
+</html>

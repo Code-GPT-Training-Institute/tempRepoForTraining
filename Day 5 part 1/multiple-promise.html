@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstPromise = function() {
+            return new Promise(function(resolve, reject) { // Custom promise
+                                    resolve(
+                                            {
+                                                title : "New Ironman"
+                                            }
+                                        )
+                                });
+        } 
+        let secondPromise = function() {
+            return new Promise(function(resolve, reject) { // Custom promise
+                                    resolve(
+                                            {
+                                                power : 5
+                                            }
+                                        )
+                                });
+        }
+
+        let thirdPromise = function() {
+            return new Promise(function(resolve, reject) { // Custom promise
+                                    reject(
+                                            {
+                                                firstname : "Tony"
+                                            }
+                                        )
+                                });
+        }
+        
+        // Promise.all([firstPromise(), secondPromise(), thirdPromise()])
+        //     .then(res => {
+        //         console.log(res);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+        // Promise.any([firstPromise(), secondPromise(), thirdPromise()])
+        //     .then(res => {
+        //         console.log(res);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+
+        // Promise.race([firstPromise(), secondPromise(), thirdPromise()])
+        //     .then(res => {
+        //         console.log(res);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+
+        Promise.allSettled([firstPromise(), secondPromise(), thirdPromise()])
+            .then(res => {
+                console.log(res);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    </script>
+</body>
+</html>

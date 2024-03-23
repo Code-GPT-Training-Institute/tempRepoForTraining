@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        .box {
+            color: red;
+        }
+    </style>
+    <script>
+        let list1 = React.createElement("li", {key: "one"}, "List item 1");
+        let list2 = React.createElement("li", {key: "two"}, "List item 2");
+        let list3 = React.createElement("li", {key: "three"}, "List item 3");
+        let list4 = React.createElement("li", {key: "four"}, "List item 4");
+
+        let elm = React.createElement("ul", { className: "box" }, [list1, list2, list3, list4]);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            ReactDOM.createRoot(document.getElementById("root")).render(elm);
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
