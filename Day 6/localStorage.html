@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const key = "employees";
+        let employeeArray = [];
+
+        let employee = {
+            name: "Shiva",
+            age: 26,
+            salary: 10000
+        }
+
+        employeeArray.push(employee);
+
+        localStorage.setItem(key, JSON.stringify(employeeArray));
+
+        console.log(localStorage.getItem(key));
+
+        // console.log(typeof employeeArray);
+        employeeArray = JSON.parse(localStorage.getItem(key));
+        
+        // console.log(typeof employeeArray);
+        
+        employeeArray.push(employee);
+        
+        console.log(employeeArray);
+
+        localStorage.setItem(key, JSON.stringify(employeeArray));
+        
+
+    </script>
+</body>
+</html>

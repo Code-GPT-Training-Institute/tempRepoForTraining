@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>id: </label>
+    <input id="id" type="number"/>
+
+    <br>
+    <label>name: </label>
+    <input type="text"/>
+    <br>
+    <label>age: </label>
+    <input type="number"/>
+    <br>
+    <label>salary: </label>
+    <input type="number"/>
+    <button onclick="create()">create</button>
+    <button>update</button>
+    <button>delete</button>
+
+    <script>
+        const key = "sessionEmployees";
+        let employeeArray = [];
+
+        function create() {
+            let employee = {
+                id: parseInt(document.getElementById("id").value),
+                name: "Shiva",
+                age: 26,
+                salary: 10000
+            }
+            employeeArray.push(employee);
+
+            sessionStorage.setItem(key, JSON.stringify(employeeArray)); // create
+        }
+        console.log(sessionStorage.getItem(key));
+
+        // // console.log(typeof employeeArray);
+        // employeeArray = JSON.parse(sessionStorage.getItem(key)); // Read
+        
+        // // console.log(typeof employeeArray);
+        
+        // employee.id = 2;
+        // employeeArray.push(employee);
+        
+        // console.log(employeeArray);
+
+        // sessionStorage.setItem(key, JSON.stringify(employeeArray));
+
+
+        // employeeArray = JSON.parse(sessionStorage.getItem(key));
+        
+        // for (let employee of employeeArray) {
+        //     if (employee.id === 2) {
+        //         employee.name = "Anitha";
+        //         employee.age = 23;
+        //     }
+        // }// Update
+
+        // sessionStorage.setItem(key, JSON.stringify(employeeArray));
+        
+        // const deleteId = 2;
+
+        // employeeArray = JSON.parse(sessionStorage.getItem(key));
+
+        // employeeArray = employeeArray.filter(employee => employee.id != deleteId); // Delete
+
+        // console.log(employeeArray);
+
+        // sessionStorage.setItem(key, JSON.stringify(employeeArray));
+
+    </script>
+</body>
+</html>
