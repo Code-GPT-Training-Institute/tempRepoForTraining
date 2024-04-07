@@ -20,7 +20,7 @@
         // let list3 = React.createElement("li", {key: "three"}, "List item 3");
         // let list4 = React.createElement("li", {key: "four"}, "List item 4");
 
-        // let elm = React.createElement("ul", { className: "box" }, [list1, list2, list3, list4]);
+        // let elm = React.createElement("ul", { classNameName: "box" }, [list1, list2, list3, list4]);
 
         // Functional component
         let Elm = function(props) {
@@ -33,12 +33,180 @@
                 </div>
         }
 
+        let HeaderElm = function(props) {
+            return <div>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="#">Navbar</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Link</a>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                                </a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" href="#">Action</a>
+                                    <a className="dropdown-item" href="#">Another action</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                        <form className="form-inline">
+                            <div className="input-group">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        }
+
+        let FooterElm = function(props) {
+            return <div className="container my-5">
+
+  <footer
+          className="text-center text-lg-start text-white"
+          style="background-color: #1c2331"
+          >
+    <section
+             className="d-flex justify-content-between p-4"
+             style="background-color: #6351ce"
+             >
+      <div className="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+
+      <div>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-google"></i>
+        </a>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="" className="text-white me-4">
+          <i className="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+
+    <section className="">
+      <div className="container text-center text-md-start mt-5">
+        <div className="row mt-3">
+          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 className="text-uppercase fw-bold">Company name</h6>
+            <hr
+                className="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+
+          <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 className="text-uppercase fw-bold">Products</h6>
+            <hr
+                className="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" className="text-white">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">Bootstrap Angular</a>
+            </p>
+          </div>
+
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 className="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                className="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" className="text-white">Your Account</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#!" className="text-white">Help</a>
+            </p>
+          </div>
+
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 className="text-uppercase fw-bold">Contact</h6>
+            <hr
+                className="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i className="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i className="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+         className="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a className="text-white" href="https://mdbootstrap.com/"
+         >MDBootstrap.com</a
+        >
+    </div>
+  </footer>
+
+</div>
+        }
+
 
         ReactDOM.createRoot(document.getElementById("root")).render(
             <div>
+                <HeaderElm />
                 <Elm title="First Product" rate="20" /> 
                 <Elm title="Second Product" rate="30"/> 
                 <Elm title="Third Product" rate="40"/>
+                <FooterElm />
             </div>
         );
     </script>
